@@ -1,0 +1,11 @@
+name: node-n
+description: Install and manage multiple versions of nodejs by leveraging the N tool
+author: https://github.com/msessa
+requirements: []
+configuration:
+  properties:
+    node-version:
+      type: string
+    tool-install-dir:
+      type: string
+  additionalProperties: false
