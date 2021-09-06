@@ -8,7 +8,7 @@ Add the following to your `pipeline.yml`:
 
 ```yml
 steps:
-  - command: ls
+  - command: node --version
     plugins:
       - sv-oss/node-n#v0.1.1:
           node-version: v15
