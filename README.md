@@ -1,6 +1,6 @@
-# Node version manager tool (N) buildkite plugin
+# Node version manager tool (`n`) buildkite plugin
 
-Install and manage multiple node versions by leveraging the [N](https://github.com/tj/n) tool
+Install and manage multiple node versions by leveraging the [n](https://github.com/tj/n) tool
 
 ## Example
 
@@ -10,7 +10,7 @@ Add the following to your `pipeline.yml`:
 steps:
   - command: ls
     plugins:
-      - sv-oss/node-n#v0.1.0:
+      - sv-oss/node-n#v0.1.1:
           node-version: v15
 ```
 
@@ -19,7 +19,7 @@ steps:
 ### `node-version` (Optional, string)
 
 The node version to install. (defaults to `lts`)
-This parameter accepts any input supported by the N tool install command.
+This parameter accepts any input supported by the `n` tool install command.
 See the [relevant documentation](https://github.com/tj/n#specifying-nodejs-versions) for more information
 
 
