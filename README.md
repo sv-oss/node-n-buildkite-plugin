@@ -10,7 +10,7 @@ Add the following to your `pipeline.yml`:
 steps:
   - command: node --version
     plugins:
-      - sv-oss/node-n#v0.1.1:
+      - sv-oss/node-n#v0.1.2:
           node-version: v15
 ```
 

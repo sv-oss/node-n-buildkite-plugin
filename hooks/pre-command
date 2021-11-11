@@ -3,7 +3,7 @@ set -euo pipefail
 
 DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
-export N_PREFIX="${BUILDKITE_PLUGIN_N_TOOL_INSTALL_DIR:-$HOME/n}"
+export N_PREFIX="${BUILDKITE_PLUGIN_NODE_N_TOOL_INSTALL_DIR:-$HOME/n}"
 
 [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
@@ -12,7 +12,7 @@ if ! n --version >/dev/null 2>&1 ; then
   curl -s -L https://git.io/n-install | bash -s -- -y -;
 fi
 
-NODE_VERSION="${BUILDKITE_PLUGIN_N_NODE_VERSION:-lts}"
+NODE_VERSION="${BUILDKITE_PLUGIN_NODE_N_NODE_VERSION:-lts}"
 
 echo "~~~ :nodejs: installing node version ${NODE_VERSION}"
 n install "${NODE_VERSION}"
